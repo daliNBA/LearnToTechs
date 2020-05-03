@@ -1,6 +1,6 @@
 using System;
 
-namespace LearnToTech.Models
+namespace LearnToTech.WebUI.Models
 {
     public class ErrorViewModel
     {
