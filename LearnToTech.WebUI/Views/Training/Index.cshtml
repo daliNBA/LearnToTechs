@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Training>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Training</h1>
+    @foreach (var item in Model)
+    {
+        <div class="row">
+
+            <div class="col-3"> @item.Label</div>
+            <div class="col-3"> @item.Price</div>
+            <div class="col-3"> @item.IsSubtitled</div>
+        </div>
+    }
+</div>

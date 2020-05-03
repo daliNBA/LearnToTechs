@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using LearnToTech.Database.Enities;
+using Microsoft.EntityFrameworkCore;
 
 namespace LearnToTech.Database
 {
@@ -8,5 +8,6 @@ namespace LearnToTech.Database
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
+        public DbSet<Training> Trainings { get; set; }
     }
 }
