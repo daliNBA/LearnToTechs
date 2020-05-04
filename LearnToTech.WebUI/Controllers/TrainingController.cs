@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LearnToTech.Database.Enities;
+﻿using LearnToTech.Database.Enities;
 using LearnToTech.Infrastructure.DataAccess;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace LearnToTech.WebUI.Controllers
 {

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LearnToTech.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using LearnToTech.WebUI.Models;
+using System.Diagnostics;
 
 namespace LearnToTech.WebUI.Controllers
 {
