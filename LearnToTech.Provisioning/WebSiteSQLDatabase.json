@@ -14,6 +14,7 @@
         "D1",
         "B1",
         "B2",
+        "databaseName",
         "B3",
         "S1",
         "S2",
@@ -42,6 +43,9 @@
       "type": "securestring"
     },
     "databaseName": {
+      "type": "string"
+    },
+    "localConnectionString": {
       "type": "string"
     },
     "collation": {

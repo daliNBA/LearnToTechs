@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-
+using System.IO;
 
 namespace LearnToTech.DatabaseMigrator
 {
@@ -10,8 +10,18 @@ namespace LearnToTech.DatabaseMigrator
     {
         public DatabaseContext CreateDbContext(string[] args)
         {
-            var configuration = new ConfigurationBuilder().AddEnvironmentVariables().AddUserSecrets("LearnToTech.DatabaseMigrator").Build();
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            string path = Directory.GetCurrentDirectory();
+
+            var builder = new ConfigurationBuilder()
+                               .SetBasePath(path)
+                               .AddJsonFile("local.settings.json");
+
+
+            var configuration = builder.Build();
+
+            //var configuration = new ConfigurationBuilder().AddEnvironmentVariables().AddUserSecrets("LearnToTech.Migration").Build();
+            //var configuration = new ConfigurationBuilder().Build();
+            string connectionString = configuration.GetConnectionString("DefaultConnection");
             var options = new DbContextOptionsBuilder<DatabaseContext>().UseSqlServer(connectionString, x => x.CommandTimeout(3600 * 6)).Options;
             return new DatabaseContext(options);
         }

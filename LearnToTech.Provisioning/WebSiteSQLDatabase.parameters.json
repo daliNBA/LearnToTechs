@@ -10,6 +10,9 @@
     },
     "databaseName": {
       "value": null
+    },
+    "localConnectionString": {
+      "value": "Server=localhost\\SQLEXPRESS;Database=LearnToTech;Trusted_Connection=True;MultipleActiveResultSets=true"
     }
   }
 }
