@@ -19,7 +19,7 @@ namespace LearnToTech.UnitTests
         {
             // Create a LocalDB database for each test run
             var databaseName = Guid.NewGuid().ToString();
-            var connectionString = $"Server=(localdb)\\MSSQLLocalDB;Database={databaseName};Trusted_Connection=True;MultipleActiveResultSets=False";
+            var connectionString = $"Server=localhost\\SQLEXPRESS;Database={databaseName};Trusted_Connection=True;MultipleActiveResultSets=False";
             options = new DbContextOptionsBuilder<DatabaseContext>().UseSqlServer(connectionString).Options;
             using (var context = new DatabaseContext(options))
                 context.Database.Migrate();

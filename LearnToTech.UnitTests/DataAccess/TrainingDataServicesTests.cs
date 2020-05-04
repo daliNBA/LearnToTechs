@@ -1,6 +1,7 @@
 ﻿using LearnToTech.Database;
 using LearnToTech.Infrastructure.DataAccess;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace LearnToTech.UnitTests.DataAccess
@@ -22,7 +23,7 @@ namespace LearnToTech.UnitTests.DataAccess
             using (var ds = new TrainingDataService(options))
             {
                 var trainings = await ds.GetAllTraining();
-                Assert.IsNotNull(trainings);
+                Assert.AreEqual(2, trainings.Count());
             }
         }
     }
