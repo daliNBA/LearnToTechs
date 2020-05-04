@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "hostingPlanName": {
-      "value": null
+      "value": "LearnToTech-plan"
     },
     "administratorLogin": {
-      "value": null
+      "value": "MAHDOUI"
+    },
+    "administratorLoginPassword": {
+      "value": "Dalirachida21"
     },
     "databaseName": {
-      "value": null
-    },
-    "localConnectionString": {
-      "value": "Server=localhost\\SQLEXPRESS;Database=LearnToTech;Trusted_Connection=True;MultipleActiveResultSets=true"
+      "value": "LearnTotech-db"
     }
   }
 }
