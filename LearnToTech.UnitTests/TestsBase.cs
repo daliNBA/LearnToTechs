@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Speig.Eliot.MyEquipment.UnitTests
+namespace LearnToTech.UnitTests
 {
     /// <summary>Base class for all tests. Do not derive directly from this class.</summary>
     public abstract class TestsBase
@@ -154,7 +154,7 @@ namespace Speig.Eliot.MyEquipment.UnitTests
             return CultureInfo.CurrentCulture;
         }
 
-        protected Training RandomEntity(bool? isValid = null)
+        protected Training RandomTraining(bool? isValid = null)
         {
             return new Training
             {

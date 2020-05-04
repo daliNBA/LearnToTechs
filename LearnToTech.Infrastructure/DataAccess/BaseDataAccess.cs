@@ -1,17 +1,36 @@
 ﻿using LearnToTech.Database;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LearnToTech.Infrastructure.DataAccess
 {
-    public abstract class BaseDataAccess
+    public abstract class BaseDataAccess : IDisposable
     {
         protected readonly DatabaseContext context;
         public BaseDataAccess(DbContextOptions<DatabaseContext> options)
         {
             context = new DatabaseContext(options);
         }
+
+        #region IDisposable Support
+
+        private bool disposedValue = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                    context.Dispose();
+                disposedValue = true;
+            }
+        }
+
+        void IDisposable.Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion
     }
 }

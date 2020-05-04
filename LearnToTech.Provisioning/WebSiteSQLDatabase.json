@@ -45,9 +45,6 @@
     "databaseName": {
       "type": "string"
     },
-    "localConnectionString": {
-      "type": "string"
-    },
     "collation": {
       "type": "string",
       "defaultValue": "SQL_Latin1_General_CP1_CI_AS"

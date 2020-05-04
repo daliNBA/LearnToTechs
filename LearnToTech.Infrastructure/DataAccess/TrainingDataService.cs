@@ -11,8 +11,8 @@ namespace LearnToTech.Infrastructure.DataAccess
     {
         public TrainingDataService(DbContextOptions<DatabaseContext> options) : base(options)
         {
-
         }
+
         public async Task AddTraining(Training training)
         {
             context.Trainings.Add(training);
