@@ -11,5 +11,6 @@ namespace LearnToTech.Database.Enities
         public decimal Price { get; set; }
         public bool IsSubtitled { get; set; }
         public bool IsActive { get; set; }
+        public Category Category { get; set; }
     }
 }

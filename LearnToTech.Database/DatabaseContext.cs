@@ -9,5 +9,6 @@ namespace LearnToTech.Database
         {
         }
         public DbSet<Training> Trainings { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
